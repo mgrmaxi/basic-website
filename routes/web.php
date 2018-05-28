@@ -19,6 +19,11 @@ Route::get('/home','pagesController@home');
 Route::get('/about','pagesController@about');
 Route::get('/contact','pagesController@contact');
 
+Route::get('/posts','postsController@posts');
+Route::get('/post/{id}','postsController@post');
+Route::post('/posts','postsController@store')->name('store');;
+
+
 Route::get('/message','messagesController@getMessages');
 Route::post('/contact','messagesController@submit')->name('submit');
 
